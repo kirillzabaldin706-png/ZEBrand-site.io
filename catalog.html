@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZEBrand — Catalog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">ZEB<span>rand</span></a>
+      <nav class="nav">
+        <a href="index.html" data-i18n="nav_home">Главная</a>
+        <a href="catalog.html" class="active" data-i18n="nav_catalog">Каталог</a>
+        <a href="about.html" data-i18n="nav_about">О нас</a>
+        <a href="contact.html" data-i18n="nav_contact">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ua">UA</button>
+        </div>
+        <a href="cart.html" class="cart-btn">🛒 <span class="cart-count" style="display:none">0</span></a>
+        <button class="menu-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 3rem;">
+    <div class="section-title">
+      <h2 data-i18n="nav_catalog">Каталог</h2>
+    </div>
+
+    <div class="filters-bar">
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all" data-i18n="all">Все</button>
+        <button class="filter-btn" data-filter="outerwear" data-i18n="cat_outerwear">Верхняя одежда</button>
+        <button class="filter-btn" data-filter="dresses" data-i18n="cat_dresses">Платья</button>
+        <button class="filter-btn" data-filter="accessories" data-i18n="cat_accessories">Аксессуары</button>
+        <button class="filter-btn" data-filter="knitwear" data-i18n="cat_knitwear">Трикотаж</button>
+        <button class="filter-btn" data-filter="shirts" data-i18n="cat_shirts">Рубашки</button>
+        <button class="filter-btn" data-filter="footwear" data-i18n="cat_footwear">Обувь</button>
+      </div>
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+        <div class="search-box">
+          <input type="text" id="search-input" data-i18n-placeholder="search_placeholder" placeholder="Поиск товаров...">
+        </div>
+        <select class="sort-select" id="sort-select">
+          <option value="default" data-i18n="sort_default">По умолчанию</option>
+          <option value="price_asc" data-i18n="sort_price_asc">Цена: по возрастанию</option>
+          <option value="price_desc" data-i18n="sort_price_desc">Цена: по убыванию</option>
+          <option value="name" data-i18n="sort_name">Название А-Я</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="products-grid" id="products-grid">
+      <!-- JS -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">ZEB<span>rand</span></a>
+        <p data-i18n="footer_desc">Премиальная брендовая мода для тех, кто ценит настоящее качество и стиль.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer_shop">Магазин</h4>
+        <ul>
+          <li><a href="catalog.html" data-i18n="nav_catalog">Каталог</a></li>
+          <li><a href="catalog.html?cat=outerwear" data-i18n="cat_outerwear">Верхняя одежда</a></li>
+          <li><a href="catalog.html?cat=accessories" data-i18n="cat_accessories">Аксессуары</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer_company">Компания</h4>
+        <ul>
+          <li><a href="about.html" data-i18n="nav_about">О нас</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Контакты</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer_support">Поддержка</h4>
+        <ul>
+          <li><a href="contact.html">FAQ</a></li>
+          <li><a href="contact.html">Shipping</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer_rights">© 2026 ZEBrand. Все права защищены.</span>
+      <div class="socials">
+        <a href="#">IG</a>
+        <a href="#">FB</a>
+        <a href="#">TW</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
